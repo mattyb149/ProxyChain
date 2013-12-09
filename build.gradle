@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = JavaVersion.VERSION_1_6
+
+project.repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.8'
+}
+
+task createGradleWrapper(type: Wrapper) {
+  gradleVersion = '1.8'
+}
